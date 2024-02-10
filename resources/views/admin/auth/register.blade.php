@@ -1,6 +1,6 @@
-<x-guest-layout>
-    <h2>User Register</h2>
-    <form method="POST" action="{{ route('register') }}">
+<x-admin-guest-layout>
+    <h2>Admin register</h2>
+    <form method="POST" action="{{ route('admin.register') }}">
         @csrf
 
         <!-- Name -->
@@ -41,7 +41,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('admin.login') }}">
                 {{ __('Already registered?') }}
             </a>
 
@@ -50,4 +50,4 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-admin-guest-layout>
